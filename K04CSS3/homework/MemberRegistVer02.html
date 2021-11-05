@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p{
+            padding-left: 66%;
+            font-size: 12px;
+        }
+        table {
+            border: 0px;
+            margin:auto;
+            background-color: rgb(210, 210, 210); 
+            width: 650px;
+            margin-bottom: 2%;
+            font-size: 13px;
+        }
+
+
+        
+        .btn0{
+            border-radius: 3px;
+            border: 0;
+            color: white;
+            background-color: rgb(29, 29, 29);
+        }
+
+        
+        #btn1{
+            border-radius: 3px; 
+            width: 120px; height: 30px;
+            border: 0;
+            color: white;
+            background-color: red;
+        }
+        #btn2{
+            border-radius: 3px; 
+            width: 120px; height: 30px;
+            border: 0;
+            color: white;
+            background-color: rgb(29, 29, 29);
+        }
+        .sub{
+            height: 40px;
+            font-weight: bold;
+            background-color: rgb(225, 225, 225);
+        }
+        td{
+            border: 0px;
+            padding-left: 10px;
+            background-color: white;
+        }
+        input[type='text']{
+            border-radius: 1px;
+            border: 1px solid #AFAFAF;
+        }
+        .required::first-letter{color: red;}
+
+        /* 
+            pading :10px
+            상하좌우 다10px씩 간격벌림
+        */
+
+    </style>
+
+</head>
+<body>
+    
+    <div>
+        <div style="margin:auto; width: 650px; text-align: right;">
+            *필수입력
+        </div>
+        <table>
+
+            <colgroup>
+                <col width="20%">
+                <col width="*">
+            </colgroup>
+
+            <tr>
+                <td class="sub"><span style="color: red;">*</span>아이디</td>
+                <td>
+                    <input type="text"size="10"/>
+                    <input class="btn0" type="button" value="중복확인" >
+                    <!-- <button type="button">중복확인</button> -->
+                    &nbsp;
+                    <span style="font-size: 12px; color: gray;"> +4~15자, 첫 영문자, 영문자와 숫자 조합</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="sub">*비밀번호</td>
+                <td><input type="text"size="8"/></td>
+            </tr>
+            <tr>
+                <td class="sub">*비밀번호 확인</td>
+                <td>
+                    <input type="text"size="8"/>
+                    &nbsp;
+                    <span style="color:gray">(확인을 위해 다시 입력해주세요.)</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="sub">*이름</td>
+                <td><input type="text"size="10"/></td>
+            </tr>
+            <tr>
+                <td class="sub">생년월일</td>
+                <td>
+                    <input type="radio" name="i" value="pol" checked />남자
+                    <input type="radio" name="i" value="pol" />여자
+                    &nbsp;&nbsp;
+                    <input type="text"size="3"/>년
+                    <input type="text"size="1"/>월
+                    <input type="text"size="1"/>일
+                    &nbsp;&nbsp;
+                    <span style="color:gray">(예, 2000년 1월 31일)</span>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2" class="sub">*이메일</td>
+                <td style="height: 30px;">
+                    <input type="text"size="8"/> @
+                    <input type="text"size="8"/>
+                    <select name="sel" style="width:20%">
+                        <option>gmail.com</option>
+                    </select>
+                    <input type="radio" name="in" />수신허용
+                    <input type="radio" name="in" checked/>수신불가
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span style="font-size: 12px; color: gray;">※hanmail.net은 메일 수신이 어려울 수 있으니
+                    가급적 다른 메일을 이용하시기 바랍니다. </span>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="3" class="sub">주소</td>
+                <td style="height: 30px;">
+                    <input class="btn0" type="button" value="주소찾기" >
+                    <input type="text"size="5"/> (우편번호)
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 30px;">
+                    <input type="text"size="69%"/>
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 30px;">
+                    <input type="text"size="54%"/> &nbsp;+나머지 주소
+                </td>
+            </tr>
+            <tr>
+                <td class="sub">전화번호</td>
+                <td>
+                    <input type="text"size="1"/> -
+                    <input type="text"size="3"/> -
+                    <input type="text"size="3"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="sub">*휴대전화</td>
+                <td>
+                    <input type="text"size="1"/> -
+                    <input type="text"size="3"/> -
+                    <input type="text"size="3"/>
+                    &nbsp;&nbsp;
+                    <input type="radio" name="inter" value="pol" checked />SMS 수신허용
+                    <input type="radio" name="inter" value="pol" />SMS 수신불가
+                </td>
+            </tr>
+            <tr>
+                <td class="sub">*관심분야</td>
+                <td>
+                    <select name="sel" style="width:60%">
+                        <option>::관심분야 선택::</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="sub">가입경로</td>
+                <td>
+                    <select name="sel" style="width:60%">
+                        <option>::가입경로 선택::</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    <div>
+    <table style="background-color: white;">
+        <td style="text-align: center;">
+            <input id="btn1" type="button" value="등록하기" >
+            &nbsp;&nbsp;
+            <input id="btn2" type="button" value="새로쓰기" >
+        </td>
+    </table>
+    </div>
+</table>
+</html>
