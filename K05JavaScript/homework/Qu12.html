@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qu12.html</title>
+</head>
+<body>
+    <h2>문자열 배열 다루기</h2>
+    <hr>
+    <script>
+        var names = new Array("wonsun", "jaemoonlee", "kitae", "gracehwang");
+        document.write("이름 : ");
+        for(var i=0; i<names.length; i++) 
+            document.write(names[i]+ " ");
+
+        document.write("<br>가장 긴 이름 : ");
+        var long = names[0];
+        for(var i=1; i<names.length; i++){
+            if(long.length<names[i].length) 
+                long = names[i];
+        }
+        document.write(long);
+
+        document.write("<br>가장 먼저 나오는 이름 : ");
+        var first = names[0];
+        var len;
+        for(var i=1; i<names.length; i++){
+
+            if(first.length<=names[i].length)
+                len = first.length;
+            else
+                len = names[i].length;
+
+            for(var j=0; j<len; j++){//알파벳이 같을때를 대비한 for문
+                if(first.charCodeAt(j)>names[i].charCodeAt(j)) {
+                    first = names[i];
+                    break;
+                }
+                else if(first.charCodeAt(j) == names[i].charCodeAt(j)) {//알파벳이 같을경우 다음알파벳 비교
+
+                    if(j+1==len)//마지막 알파벳일경우 길이가 짧은게 사전의 먼저임
+                        if(first.length>=names[i].length)
+                            first = names[i];
+
+                    continue;
+                }
+                else
+                    break;
+            }
+        }
+        document.write(first);
+
+        document.write("<br>증가순 이름 : ");
+        names.sort();
+        for(var i=0; i<names.length; i++) 
+            document.write(names[i]+ " ");
+    </script>
+</body>
+</html>
