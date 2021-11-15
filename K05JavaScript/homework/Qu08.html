@@ -9,10 +9,11 @@
 <body>
     <script>
         var num = prompt("숫자를 입력하세요");
+        //var num = parseInt(str);//숫자로 변경
         var startnum = num;
         var lastNum = num % 10;//숫자의 마지막자리 구함
         //숫자의 첫번째자리 구하기 위한 while문
-        while (num>=10) {
+        while (num>0) {
             num = Math.floor(num / 10);//Math.floor(5678/10) = 567
         }
 
